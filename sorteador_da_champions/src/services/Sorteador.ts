@@ -81,7 +81,7 @@ potes=[this.pote1,this.pote2,this.pote3,this.pote4];
   private countPais(clube: Clube, pais: string, todos: Map<string, Clube>): number {
     let total = 0;
     for (const j of clube.jogos) {
-      const advId = j.adversarioId[0]; // adversarioId é string[]
+      const advId = j.adversarioId[0]; 
       const adv = todos.get(advId);
       if (adv?.pais === pais) total++;
     }
@@ -107,7 +107,7 @@ potes=[this.pote1,this.pote2,this.pote3,this.pote4];
       if (this.countPais(clube, adv.pais, todos) >= 2) continue;
 
       clube.jogos.push({
-        adversarioId: [adv.id], // precisa ser array!
+        adversarioId: [adv.id], 
         local: Math.random() < 0.5 ? "casa" : "fora"
       });
 
@@ -116,8 +116,8 @@ potes=[this.pote1,this.pote2,this.pote3,this.pote4];
     }
   }
 
-  // 🔹 método principal
-  public sortearAdversarios(): void {
+  showOpsClicked=false;
+  public sortearAdversarios(): Clube[][]{
     const todosClubes = this.potes.flatMap(p => p.clubes);
     const mapaClubes = new Map<string, Clube>(todosClubes.map(c => [c.id, c]));
 
@@ -128,7 +128,7 @@ potes=[this.pote1,this.pote2,this.pote3,this.pote4];
           this.escolherDoPote(clube, poteAlvo, 2, mapaClubes);
         }
       }
-    }
+    }return this.potes.map(p => p.clubes);
   }
 }
 
