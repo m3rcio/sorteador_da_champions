@@ -51,6 +51,21 @@ const pote4 = new Pote(4, [
 
 const potes=[pote1,pote2,pote3,pote4]
 
-function organizarPotes(pote1,pote2,pote3,pote4){
-    return [...pote1, ...pote2, ...pote3, ...pote4];
+function organizarPotes([pote1,pote2,pote3,pote4]){
+
+    let todosPotes=[pote1,pote2,pote3,pote4]
+    todosPotes.flat() // O flat retorna todos os arrays em um só
+
+    for(let i=todosPotes.length -1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [todosPotes[i], todosPotes[j]] = [todosPotes[j], todosPotes[i]];
+    }
+
+     let resultado : any[]=[];
+  for (let i = 0; i < todosPotes.length; i += 9) {
+    resultado.push(todosPotes.slice(i, i + 9));
+  }
+
+  return resultado;
+    
 }
