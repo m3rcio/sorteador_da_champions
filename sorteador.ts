@@ -1,7 +1,8 @@
 import { Clube, Pote } from './classes';
 
 
-const pote1 = new Pote(1, [
+export class Sorteador{
+    pote1 = new Pote(1, [
   new Clube("1", "PSG", "psg.png", 1, "França", []),
   new Clube("2", "Real Madrid", "realmadrid.png", 1, "Espanha", []),
   new Clube("3", "Manchester City", "mancity.png", 1, "Inglaterra", []),
@@ -13,7 +14,7 @@ const pote1 = new Pote(1, [
   new Clube("9", "Chelsea", "chelsea.png", 1, "Inglaterra", []),
 ]);
 
-const pote2 = new Pote(2, [
+pote2 = new Pote(2, [
   new Clube("10", "Arsenal", "arsenal.png", 2, "Inglaterra", []),
   new Clube("11", "Bayer Leverkusen", "leverkusen.png", 2, "Alemanha", []),
   new Clube("12", "Atlético de Madrid", "atleti.png", 2, "Espanha", []),
@@ -25,7 +26,7 @@ const pote2 = new Pote(2, [
   new Clube("18", "Club Brugge", "brugge.png", 2, "Bélgica", []),
 ]);
 
-const pote3 = new Pote(3, [
+pote3 = new Pote(3, [
   new Clube("19", "Tottenham", "tottenham.png", 3, "Inglaterra", []),
   new Clube("36", "PSV", "psv.png", 3, "Holanda", []),
   new Clube("20", "Ajax", "ajax.png", 3, "Holanda", []),
@@ -37,7 +38,7 @@ const pote3 = new Pote(3, [
   new Clube("26", "Marseille", "marseille.png", 3, "França", []),
 ]);
 
-const pote4 = new Pote(4, [
+ pote4 = new Pote(4, [
   new Clube("27", "Copenhaga", "copenhaga.png", 4, "Dinamarca", []),
   new Clube("28", "Monaco", "monaco.png", 4, "França", []),
   new Clube("29", "Galatasaray", "galatasaray.png", 4, "Turquia", []),
@@ -49,13 +50,13 @@ const pote4 = new Pote(4, [
   new Clube("35", "Kairat Almaty", "kairat.png", 4, "Cazaquistão", []),
 ]);
 
-const potes=[pote1,pote2,pote3,pote4]
+potes=[this.pote1,this.pote2,this.pote3,this.pote4]
 
-function organizarPotes([pote1,pote2,pote3,pote4]){
+ organizarPotes(potes:Pote[]){
 
-    let todosPotes=[pote1,pote2,pote3,pote4]
-    todosPotes.flat() // O flat retorna todos os arrays em um só
+    let todosPotes=potes.flat(); // O flat retorna todos os arrays em um só
 
+     
     for(let i=todosPotes.length -1; i > 0; i--){
         const j = Math.floor(Math.random() * (i + 1));
         [todosPotes[i], todosPotes[j]] = [todosPotes[j], todosPotes[i]];
@@ -69,3 +70,9 @@ function organizarPotes([pote1,pote2,pote3,pote4]){
   return resultado;
     
 }
+
+
+
+}
+
+
