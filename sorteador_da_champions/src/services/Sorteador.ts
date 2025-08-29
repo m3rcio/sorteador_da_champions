@@ -107,8 +107,9 @@ potes=[this.pote1,this.pote2,this.pote3,this.pote4];
       if (this.countPais(clube, adv.pais, todos) >= 2) continue;
 
       clube.jogos.push({
-        adversarioId: [adv.id], 
-        local: Math.random() < 0.5 ? "casa" : "fora"
+          adversarioId: [adv.id],
+          local: Math.random() < 0.5 ? "casa" : "fora", adversarioLogo: [adv.logo],
+          adversarioNome: [adv.nome]
       });
 
       jaEscolhidos.add(adv.id);

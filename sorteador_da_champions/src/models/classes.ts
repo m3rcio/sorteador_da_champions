@@ -1,8 +1,8 @@
 export class Clube {
  
   id: string;
-  nome?: string;
-  logo?: string;
+  nome: string;
+  logo: string;
   pote?: number;
   pais: string;
   jogos: Jogo[];
@@ -37,5 +37,7 @@ export class Pote {
 
 export interface Jogo {
   adversarioId: string[];           
+  adversarioNome: string[];           
+  adversarioLogo: string[];           
   local: "casa" | "fora";
 }
