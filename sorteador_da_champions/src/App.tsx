@@ -23,10 +23,11 @@ const App: React.FC=()=> {
         <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
           {grupos.map((grupo, idx) => (
             <div key={idx} style={{ border: "1px solid #ccc", padding: "10px" }}>
-              <h2>Grupo {idx + 1}</h2>
+              <h2>Pote {idx + 1}</h2>
               <ul>
                 {grupo.map((clube) => (
                   <li key={clube.id}>
+                    <img src={clube.logo}></img>
                     {clube.nome} ({clube.pais})
                   </li>
                 ))}
