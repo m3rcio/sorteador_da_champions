@@ -7,7 +7,7 @@ export class Sorteador{
   new Clube("1", "PSG", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52747.png", 1, "França", []),
   new Clube("2", "Real Madrid", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50051.png", 1, "Espanha", []),
   new Clube("3", "Manchester City", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52919.png", 1, "Inglaterra", []),
-  new Clube("4", "Barcelona", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50080.png", 1, "Espanha", []),
+  new Clube("4", "FC Barcelona", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50080.png", 1, "Espanha", []),
   new Clube("5", "B. Dortmund", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52758.png", 1, "Alemanha", []),
   new Clube("6", "B. de Munique", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50037.png", 1, "Alemanha", []),
   new Clube("7", "Liverpool", "https://img.uefa.com/imgml/TP/teams/logos/32x32/7889.png", 1, "Inglaterra", []),
@@ -72,4 +72,70 @@ potes=[this.pote1,this.pote2,this.pote3,this.pote4];
     
 }
 
+
+ private shuffle<T>(arr: T[]): T[] {
+    return [...arr].sort(() => Math.random() - 0.5);
+  }
+
+  // 🔹 conta quantos adversários de um país o clube já tem
+  private countPais(clube: Clube, pais: string, todos: Map<string, Clube>): number {
+    let total = 0;
+    for (const j of clube.jogos) {
+      const advId = j.adversarioId[0]; // adversarioId é string[]
+      const adv = todos.get(advId);
+      if (adv?.pais === pais) total++;
+    }
+    return total;
+  }
+
+  // 🔹 escolher adversários de um pote específico
+  private escolherDoPote(clube: Clube, poteAlvo: Pote, n: number, todos: Map<string, Clube>) {
+    const jaEscolhidos = new Set(clube.jogos.map(j => j.adversarioId[0]));
+
+    let candidatos = poteAlvo.clubes.filter(c =>
+      c.id !== clube.id &&
+      c.pais !== clube.pais &&
+      !jaEscolhidos.has(c.id) &&
+      this.countPais(clube, c.pais, todos) < 2
+    );
+
+    candidatos = this.shuffle(candidatos);
+
+    let i = 0;
+    while (clube.jogos.length < 8 && n > 0 && i < candidatos.length) {
+      const adv = candidatos[i++];
+      if (this.countPais(clube, adv.pais, todos) >= 2) continue;
+
+      clube.jogos.push({
+        adversarioId: [adv.id], // precisa ser array!
+        local: Math.random() < 0.5 ? "casa" : "fora"
+      });
+
+      jaEscolhidos.add(adv.id);
+      n--;
+    }
+  }
+
+  // 🔹 método principal
+  public sortearAdversarios(): void {
+    const todosClubes = this.potes.flatMap(p => p.clubes);
+    const mapaClubes = new Map<string, Clube>(todosClubes.map(c => [c.id, c]));
+
+    for (const poteOrigem of this.potes) {
+      for (const clube of poteOrigem.clubes) {
+        clube.jogos = []; // resetar jogos
+        for (const poteAlvo of this.potes) {
+          this.escolherDoPote(clube, poteAlvo, 2, mapaClubes);
+        }
+      }
+    }
+  }
 }
+
+
+
+
+
+
+
+

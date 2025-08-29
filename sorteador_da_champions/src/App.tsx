@@ -6,10 +6,13 @@ import { Sorteador } from './services/Sorteador';
 const App: React.FC=()=> {
   
 
-  const [grupos, setGrupos] = useState<Clube[][]>([]);
+    const sorteador = new Sorteador();
+
+  const [grupos, setGrupos] = useState<Clube[][]>(
+    sorteador.potes.map((pote) => pote.clubes) 
+  );
 
   const handleSortear = () => {
-    const sorteador = new Sorteador();
     const resultado = sorteador.organizarPotes(sorteador.potes);
     setGrupos(resultado);
   };

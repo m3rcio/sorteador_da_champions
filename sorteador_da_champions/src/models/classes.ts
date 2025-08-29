@@ -4,16 +4,16 @@ export class Clube {
   nome?: string;
   logo?: string;
   pote?: number;
-  pais?: string;
-  jogos: { adversarioId: string; local: "casa" | "fora" }[];
+  pais: string;
+  jogos: Jogo[];
 
   constructor(
     id: string,
-    nome?: string,
-    logo?: string,
-    pote?: number,
-    pais?: string,
-    jogos?: { adversarioId: string; local: "casa" | "fora" }[]
+    nome: string,
+    logo: string,
+    pote: number,
+    pais: string,
+    jogos: Jogo[]
   ) {
     this.id = id;
     this.nome = nome;
@@ -33,4 +33,9 @@ export class Pote {
     this.id = id;
     this.clubes = clubes;
   }
+}
+
+export interface Jogo {
+  adversarioId: string[];           
+  local: "casa" | "fora";
 }
