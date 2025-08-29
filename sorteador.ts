@@ -27,7 +27,7 @@ const pote2 = new Pote(2, [
 
 const pote3 = new Pote(3, [
   new Clube("19", "Tottenham", "tottenham.png", 3, "Inglaterra", []),
-  new Clube("19", "PSV", "psv.png", 3, "Holanda", []),
+  new Clube("36", "PSV", "psv.png", 3, "Holanda", []),
   new Clube("20", "Ajax", "ajax.png", 3, "Holanda", []),
   new Clube("21", "Napoli", "napoli.png", 3, "Itália", []),
   new Clube("22", "Sporting", "sporting.png", 3, "Portugal", []),
@@ -49,6 +49,8 @@ const pote4 = new Pote(4, [
   new Clube("35", "Kairat Almaty", "kairat.png", 4, "Cazaquistão", []),
 ]);
 
-function organizarPotes(){
-    // return potes
+const potes=[pote1,pote2,pote3,pote4]
+
+function organizarPotes(pote1,pote2,pote3,pote4){
+    return [...pote1, ...pote2, ...pote3, ...pote4];
 }
