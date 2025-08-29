@@ -8,8 +8,8 @@ export class Sorteador{
   new Clube("2", "Real Madrid", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50051.png", 1, "Espanha", []),
   new Clube("3", "Manchester City", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52919.png", 1, "Inglaterra", []),
   new Clube("4", "Barcelona", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50080.png", 1, "Espanha", []),
-  new Clube("5", "Borussia Dortmund", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52758.png", 1, "Alemanha", []),
-  new Clube("6", "Bayern de Munique", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50037.png", 1, "Alemanha", []),
+  new Clube("5", "B. Dortmund", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52758.png", 1, "Alemanha", []),
+  new Clube("6", "B. de Munique", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50037.png", 1, "Alemanha", []),
   new Clube("7", "Liverpool", "https://img.uefa.com/imgml/TP/teams/logos/32x32/7889.png", 1, "Inglaterra", []),
   new Clube("8", "Inter de Milão", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50138.png", 1, "Itália", []),
   new Clube("9", "Chelsea", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52914.png", 1, "Inglaterra", []),
@@ -18,12 +18,12 @@ export class Sorteador{
  pote2 = new Pote(2, [
   new Clube("10", "Arsenal", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52280.png", 2, "Inglaterra", []),
   new Clube("11", "Bayer Leverkusen", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50109.png", 2, "Alemanha", []),
-  new Clube("12", "Atlético de Madrid", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50124.png", 2, "Espanha", []),
+  new Clube("12", "A. de Madrid", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50124.png", 2, "Espanha", []),
   new Clube("13", "Benfica", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50147.png", 2, "Portugal", []),
   new Clube("14", "Atalanta", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52816.png", 2, "Itália", []),
   new Clube("15", "Villarreal", "https://img.uefa.com/imgml/TP/teams/logos/32x32/70691.png", 2, "Espanha", []),
   new Clube("16", "Juventus", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50139.png", 2, "Itália", []),
-  new Clube("17", "Eintracht Frankfurt", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50072.png", 2, "Alemanha", []),
+  new Clube("17", "E. Frankfurt", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50072.png", 2, "Alemanha", []),
   new Clube("18", "Club Brugge", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50043.png", 2, "Bélgica", []),
 ]);
 

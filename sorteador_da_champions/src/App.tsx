@@ -14,11 +14,13 @@ const App: React.FC=()=> {
     setGrupos(resultado);
   };
 
+  
   return (
     <div>
       <h1>Sorteio da Champions</h1>
       <button onClick={handleSortear}>Sortear</button>
 
+  
       {grupos.length > 0 && (
         <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
           {grupos.map((grupo, idx) => (
@@ -26,9 +28,9 @@ const App: React.FC=()=> {
               <h2>Pote {idx + 1}</h2>
               <ul>
                 {grupo.map((clube) => (
-                  <li key={clube.id}>
+                  <li key={clube.id} >
                     <img src={clube.logo}></img>
-                    {clube.nome} ({clube.pais})
+                    {clube.nome}
                   </li>
                 ))}
               </ul>
