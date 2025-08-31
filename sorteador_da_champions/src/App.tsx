@@ -40,7 +40,7 @@ const App: React.FC=()=> {
                      <ul>
                       {clube.jogos.map((jogo, i)=>(
                         <li key={i}>
-                          vs {jogo.adversarioId.join(", ")} <img src={jogo.adversarioLogo.join(", ")} alt="" /> {jogo.adversarioNome} ({jogo.local})
+                          vs  <img src={jogo.adversarioLogo.join(", ")} alt="" /> {jogo.adversarioNome} ({jogo.local})
                         </li>
                       ))}
                     </ul>
