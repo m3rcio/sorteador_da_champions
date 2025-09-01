@@ -50,9 +50,6 @@ const App: React.FC=()=> {
           ))}
         </div>
       )}
-      <audio >
-  <source src="./a" type="audio/mpeg" />
-</audio>
       
     </div>
   );
