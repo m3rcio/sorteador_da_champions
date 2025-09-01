@@ -17,7 +17,7 @@ export class Sorteador{
 
  pote2 = new Pote(2, [
   new Clube("10", "Arsenal", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52280.png", 2, "Inglaterra", []),
-  new Clube("11", "Bayer Leverkusen", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50109.png", 2, "Alemanha", []),
+  new Clube("11", "B. Leverkusen", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50109.png", 2, "Alemanha", []),
   new Clube("12", "A. de Madrid", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50124.png", 2, "Espanha", []),
   new Clube("13", "Benfica", "https://img.uefa.com/imgml/TP/teams/logos/32x32/50147.png", 2, "Portugal", []),
   new Clube("14", "Atalanta", "https://img.uefa.com/imgml/TP/teams/logos/32x32/52816.png", 2, "Itália", []),

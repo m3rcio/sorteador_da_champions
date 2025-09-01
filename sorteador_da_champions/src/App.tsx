@@ -32,9 +32,9 @@ const App: React.FC=()=> {
           {grupos.map((grupo, idx) => (
             <div key={idx} style={{  padding: "10px" }}>
               <div className='poteTitle'><h2>Pote {idx + 1}</h2></div>
-              <ul>
+              <ul className='clubes_do_pote'>
                 {grupo.map((clube) => (
-                  <><span className='clubeSpan'><h2><img src={clube.logo}></img> {clube.nome} </h2></span><li key={clube.id}>
+                  <><h2><img src={clube.logo}></img> {clube.nome} </h2><li key={clube.id}>
                     <ul className="adversario-list">
                       {clube.jogos.map((jogo, i) => (
                         <li key={i}>

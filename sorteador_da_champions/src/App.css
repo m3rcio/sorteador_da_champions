@@ -26,7 +26,7 @@ body{
 }
 
 ul li{
-  color: black;
+  color: white;
   list-style: none;
   font-weight: bold;
   border-radius: 12px;
@@ -43,9 +43,27 @@ ul li{
   flex-direction: row;                                    ;
 }
 
+.adversario-list li{
+  color:white;
+}
+
+.clubes_do_pote{
+background: -webkit-linear-gradient(143deg, #070250,#0a027e);
+background: linear-gradient(143deg, #070250,#0a027e); 
+display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;                                        
+}
+
+.clubes_do_pote h2{
+  color: white;
+}
+
 .clubeSpan{
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  justify-items: center;
+  color: white;  
 }
