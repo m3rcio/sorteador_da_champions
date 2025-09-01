@@ -50,11 +50,9 @@ const App: React.FC=()=> {
           ))}
         </div>
       )}
-      {/* {grupos.map((grupo, idx)=>{
-        <div key={}>
-          <h2>Pote {</h2>
-        </div>
-      })} */}
+      <audio >
+  <source src="./a" type="audio/mpeg" />
+</audio>
       
     </div>
   );
