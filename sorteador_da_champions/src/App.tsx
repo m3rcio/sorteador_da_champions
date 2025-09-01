@@ -37,10 +37,10 @@ const App: React.FC=()=> {
                   <li key={clube.id} >
                     <img src={clube.logo}></img>
                     {clube.nome}
-                     <ul>
+                     <ul className="adversario-list">
                       {clube.jogos.map((jogo, i)=>(
-                        <li key={i}>
-                          vs  <img src={jogo.adversarioLogo.join(", ")} alt="" /> {jogo.adversarioNome} ({jogo.local})
+                        <li key={i} >
+                            <img src={jogo.adversarioLogo.join(", ")} alt="" /> {jogo.adversarioNome} ({jogo.local})
                         </li>
                       ))}
                     </ul>

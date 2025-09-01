@@ -3,10 +3,11 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+   background-color: rgb(43, 97, 247);
 }
 
 body{
-  background-color: rgb(43, 97, 247);
+  
 }
 
 
@@ -26,4 +27,9 @@ ul li{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.adversario-list{
+  display: flex;
+  flex-direction: row;
 }
