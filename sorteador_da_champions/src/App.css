@@ -7,13 +7,22 @@
 }
 
 body{
-  
+  width: 100%;
 }
 
 
 
 .card {
   padding: 2em;
+}
+
+.poteTitle{
+  background-color: rgb(65, 3, 236);
+}
+
+.poteTitle h2{
+  color: white;
+
 }
 
 ul li{
@@ -31,5 +40,12 @@ ul li{
 
 .adversario-list{
   display: flex;
-  flex-direction: row;
+  flex-direction: row;                                    ;
+}
+
+.clubeSpan{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
 }

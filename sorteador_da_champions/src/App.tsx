@@ -31,20 +31,18 @@ const App: React.FC=()=> {
         <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
           {grupos.map((grupo, idx) => (
             <div key={idx} style={{  padding: "10px" }}>
-              <h2>Pote {idx + 1}</h2>
+              <div className='poteTitle'><h2>Pote {idx + 1}</h2></div>
               <ul>
                 {grupo.map((clube) => (
-                  <li key={clube.id} >
-                    <img src={clube.logo}></img>
-                    {clube.nome}
-                     <ul className="adversario-list">
-                      {clube.jogos.map((jogo, i)=>(
-                        <li key={i} >
-                            <img src={jogo.adversarioLogo.join(", ")} alt="" /> {jogo.adversarioNome} ({jogo.local})
+                  <><span className='clubeSpan'><h2><img src={clube.logo}></img> {clube.nome} </h2></span><li key={clube.id}>
+                    <ul className="adversario-list">
+                      {clube.jogos.map((jogo, i) => (
+                        <li key={i}>
+                          <img src={jogo.adversarioLogo.join(", ")} alt="" /> {jogo.adversarioNome} ({jogo.local})
                         </li>
                       ))}
                     </ul>
-                  </li>
+                  </li></>
                 ))}
               </ul>
               
