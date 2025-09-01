@@ -24,7 +24,7 @@ const App: React.FC=()=> {
   return (
     <div>
       <h1>Sorteio da Champions</h1>
-      <button onClick={handleSortear}>Sortear</button>
+      {/* <button onClick={handleSortear} className='sortear'>Sortear</button> */}
       <button onClick={mostrarAdversarios}>Mosrar Adversários</button>
   
       {grupos.length > 0 && (

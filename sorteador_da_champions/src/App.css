@@ -3,14 +3,19 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-   background-color: rgb(43, 97, 247);
 }
 
 body{
   width: 100%;
 }
 
+h1{
+  color: white;
+}
 
+.clubes_do_pote{
+  padding-right: 20px;
+}
 
 .card {
   padding: 2em;
@@ -18,12 +23,15 @@ body{
 
 .poteTitle{
   background-color: rgb(65, 3, 236);
+  transform: skew(-10deg);
 }
 
 .poteTitle h2{
   color: white;
-
 }
+
+jogo_fora{}
+jogo_em_casa{}
 
 ul li{
   color: white;

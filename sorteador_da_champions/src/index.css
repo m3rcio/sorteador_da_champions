@@ -1,9 +1,8 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(43, 97, 247);
+  /* background-color: rgb(43, 97, 247); */
     width: 100%;
+    background-image: url(./assets/champions_league.webp);
 }
 
 a {
@@ -22,7 +21,6 @@ body {
   place-items: center;
   min-height: 100vh;
   width: 100%;
-  
 }
 
 h1 {
