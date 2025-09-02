@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
+# sorteador_da_champions
+Aplicação Web para simular o sorteio da Champions League, gerando os adversários de cada clube de acordo com restrições (mesmo país, potes, jogos em casa/fora, etc).
+Este app foi desenvolvido com as tecnologias:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+⚛️ ReactJS
+ — biblioteca para construção da interface de usuário
 
-Currently, two official plugins are available:
+🟦 TypeScript
+ — superset do JavaScript que adiciona tipagem estática
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎨 CSS
+ — estilização básica
 
-## Expanding the ESLint configuration
+⚡ Vite
+ — ferramenta de build e ambiente de desenvolvimento rápido
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📌 Funcionalidades
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Organizar clubes em potes
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Sortear adversários com as seguintes regras:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Cada clube enfrenta 2 adversários de cada pote (incluindo o seu)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Não pode haver mais de 2 clubes do mesmo país contra o mesmo adversário
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Distribuição aleatória de jogos casa/fora
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Visualizar os clubes com logo, nome e jogos sorteados
+
+Possibilidade de sortear novamente clicando em um botão
+
+
+## 📸 Screenshots
+
+### 🔹 Página Inicial
+![Página Inicial](https://raw.githubusercontent.com/m3rcio/sorteador_da_champions/main/sorteador_da_champions/src/assets/home2.jpeg)
+
+### 🔹 Perfil com Links Sociais
+![Página Inicial](https://raw.githubusercontent.com/m3rcio/sorteador_da_champions/main/sorteador_da_champions/src/assets/home.jpeg)
+
+
+▶️ Como rodar
+# Clonar o repositório
+git clone https://github.com/m3rcio/sorteador_da_champions.git
+
+# Entrar na pasta
+cd sorteador_da_champions
+
+# Instalar dependências
+npm install
+
+# Rodar aplicação
+npm run dev
+
+
+A aplicação vai estar disponível em:
+👉 http://
+
+🖼️ Exemplo de uso
+
+Clique em Sortear
+
+Veja os clubes listados com seus jogos:
+
+Real Madrid
+ - vs Bayern (casa)
+ - vs Milan (fora)
+ - ...
