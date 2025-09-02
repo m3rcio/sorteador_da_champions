@@ -34,10 +34,10 @@ Possibilidade de sortear novamente clicando em um botão
 ## 📸 Screenshots
 
 ### 🔹 Página Inicial
-![Página Inicial](https://raw.githubusercontent.com/m3rcio/sorteador_da_champions/main/sorteador_da_champions/src/assets/home2.jpeg)
+![Página Inicial](https://raw.githubusercontent.com/m3rcio/sorteador_da_champions/main/src/assets/home2.jpeg)
 
 ### 🔹 Perfil com Links Sociais
-![Página Inicial](https://raw.githubusercontent.com/m3rcio/sorteador_da_champions/main/sorteador_da_champions/src/assets/home.jpeg)
+![Página Inicial](https://raw.githubusercontent.com/m3rcio/sorteador_da_champions/main/src/assets/home.jpeg)
 
 
 ▶️ Como rodar
@@ -55,7 +55,7 @@ npm run dev
 
 
 A aplicação vai estar disponível em:
-👉 http://
+👉 https://sorteador-da-champions.vercel.app/
 
 🖼️ Exemplo de uso
 
