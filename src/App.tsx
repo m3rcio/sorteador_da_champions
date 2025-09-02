@@ -12,12 +12,12 @@ const App: React.FC=()=> {
     sorteador.potes.map((pote) => pote.clubes) 
   );
 
-  const handleSortear = () => {
-    const resultado = sorteador.organizarPotes(sorteador.potes);
-    setGrupos(resultado);
-  };
+  // const handleSortear = () => {
+  //   const resultado = sorteador.organizarPotes(sorteador.potes);
+  //   setGrupos(resultado);
+  // };
   const mostrarAdversarios=()=>{
-    const resultado = sorteador.sortearAdversarios(); // agora retorna Clube[][]
+    const resultado = sorteador.sortearAdversarios(); // retorna Clube[][]
   setGrupos(resultado);
   }
   
